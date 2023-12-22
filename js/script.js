@@ -2,7 +2,13 @@ var siteName = document.getElementById('site-name');
 var siteUrl=document.getElementById('site-url');
 
 var sites=[];
-displaySites();
+// localStorage.setItem('list',JSON.stringify(sites));
+if(JSON.parse(localStorage.getItem('list')) != null){
+    // sites = JSON.parse(localStorage.getItem('list'));
+    console.log(sites)
+    displaySites();
+}
+
 function createSite(){
     if(urlValidation()){
         var site ={
@@ -62,6 +68,8 @@ function resetForm(){
     siteUrl.value="";
     siteUrl.classList.remove('valid');
     siteUrl.classList.remove('inValid');
+    siteName.classList.remove('valid');
+    siteName.classList.remove('inValid');
 }
 var iconsInValid =document.querySelectorAll(".icons");
 console.log(iconsInValid[0]);
@@ -76,7 +84,8 @@ function urlValidation(){
         console.log('match')
         return true;
     }else{
-        siteUrl.classList.add('inValid');
+        siteUrl.classList.add('inValid'); 
+        siteUrl.classList.remove('valid');
         iconsInValid[1].classList.replace('d-none','d-flex');
         console.log('not match')
         return false;
