@@ -25,7 +25,7 @@ function createSite(){
         width: 800,
         padding: "2em",
         color: "#2f2f2f",
-        background: "#fff url(/image/sad.gif) right no-repeat",
+        background: "#fff url(../image/sad.gif) right no-repeat",
         backdrop: `
             rgba(0,0,0,0.5) 
         `,       
