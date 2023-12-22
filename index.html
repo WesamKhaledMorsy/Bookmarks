@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./image/bookmark-svgrepo-com.svg" type="image/x-icon">
+    <title>Bookmark</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-12 mb-1">
+                        <div class="header text-center m-auto">
+                            <h1>Bookmark</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-12 fs-1 text-dark">
+                        <hr class="w-75 m-auto mb-4">
+                    </div>
+                    <div class="col-md-12 second-header">
+                        <h2> <i class="fa-solid fa-book-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-book-bookmark"></i></h2>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row w-75 m-auto mt-5">
+                            <div class="col-md-12 d-block align-items-center justify-content-center input-icons">                        
+                                <label for="site-name" class="col-form-label  d-flex align-self-start fs-4 form-label"> <i class="fa-solid fa-book-bookmark me-3 pt-2"></i> Site Name </label>
+                                <input type="text"  id="site-name" name="siteName" placeholder="Bookmark Name" class="form-control">
+                                <i class="fa-solid fa-radiation fa-fade d-none justify-content-end icons"></i>
+                            </div>
+                            <div class="col-md-12 d-block align-items-center justify-content-center my-4 input-icons">
+                                <label for="site-url" class="col-form-label  d-flex align-self-start fs-4 form-label"> <i class="fa-solid fa-link me-3 pt-2"></i> Site URL </label>
+                                <input type="text" id="site-url" name="websiteURL" placeholder="Website URL" class="form-control">
+                                <i class="fa-solid fa-radiation fa-fade d-none justify-content-end icons"></i>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-outline-danger fs-3 px-5 py-2" onclick="createSite()">Submit</button>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-md-12 fs-2 text-dark">
+                        <hr class="w-75 m-auto my-5">
+                    </div>
+                    <div class="col-md-12 w-75 m-auto">
+                        <div class="table-responsive m-auto">
+                        <table class="table table-dark table-striped">
+                            <thead>
+                                    <th>index</th>
+                                    <th>Website Name</th>
+                                    <th>Visit</th>
+                                    <th>Delete</th>
+                            </thead>
+                            <tbody id="tableBody">
+                                <tr>
+                                    <!-- <td>1</td>
+                                    <td>youtube</td>
+                                    <td> <button class="btn btn-success"> <i class="fa-solid fa-eye"></i> <a href="https://www.youtube.com/"  target="_blank">Visit</a> </button> </td>
+                                    <td><button class="btn btn-danger"> <i class="fa-solid fa-trash-alt"></i> Delete</button></td> -->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>                    
+                    </div>                  
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
